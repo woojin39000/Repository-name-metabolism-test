@@ -5,31 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>대사 저하 자가진단</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     :root {
       --bg: #f4f6fb;
-      --card: rgba(255, 255, 255, 0.88);
+      --card: rgba(255,255,255,0.9);
       --text: #15171c;
       --sub: #5d6472;
       --line: #e7eaf1;
       --accent: #111827;
-      --accent-soft: #eef2ff;
       --low: #17803d;
       --low-bg: #eaf8ef;
       --mid: #9a6700;
       --mid-bg: #fff4dc;
       --high: #b42318;
       --high-bg: #fdeceb;
-      --shadow: 0 20px 60px rgba(25, 35, 58, 0.10);
+      --shadow: 0 20px 60px rgba(25,35,58,0.10);
       --radius: 24px;
     }
 
     body {
       margin: 0;
-      font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Arial, sans-serif;
+      font-family: "Pretendard","Apple SD Gothic Neo","Noto Sans KR",Arial,sans-serif;
       color: var(--text);
       background:
         radial-gradient(circle at top left, #e8eeff 0%, transparent 32%),
@@ -53,8 +50,8 @@
       display: inline-block;
       padding: 8px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.9);
       backdrop-filter: blur(8px);
       font-size: 13px;
       font-weight: 700;
@@ -71,43 +68,18 @@
 
     .hero p {
       margin: 14px auto 0;
-      max-width: 650px;
+      max-width: 680px;
       color: var(--sub);
       font-size: 16px;
     }
 
     .card {
       background: var(--card);
-      border: 1px solid rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.85);
       backdrop-filter: blur(12px);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       padding: 28px;
-    }
-
-    .notice {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-
-    .notice-item {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 16px 14px;
-    }
-
-    .notice-item strong {
-      display: block;
-      font-size: 14px;
-      margin-bottom: 6px;
-    }
-
-    .notice-item span {
-      color: var(--sub);
-      font-size: 13px;
     }
 
     .question {
@@ -121,7 +93,7 @@
 
     .question:hover {
       transform: translateY(-1px);
-      box-shadow: 0 10px 24px rgba(26, 35, 57, 0.05);
+      box-shadow: 0 10px 24px rgba(26,35,57,0.05);
     }
 
     .q-title {
@@ -175,7 +147,7 @@
     .btn-primary {
       background: linear-gradient(135deg, #111827, #222b3d);
       color: #fff;
-      box-shadow: 0 12px 26px rgba(17, 24, 39, 0.22);
+      box-shadow: 0 12px 26px rgba(17,24,39,0.22);
     }
 
     .btn-primary:hover {
@@ -290,7 +262,7 @@
       padding: 15px 18px;
       border-radius: 16px;
       font-weight: 800;
-      box-shadow: 0 12px 26px rgba(17, 24, 39, 0.20);
+      box-shadow: 0 12px 26px rgba(17,24,39,0.20);
     }
 
     .cta small {
@@ -300,26 +272,10 @@
     }
 
     @media (max-width: 780px) {
-      h1 {
-        font-size: 30px;
-      }
-
-      .card {
-        padding: 18px;
-        border-radius: 20px;
-      }
-
-      .notice {
-        grid-template-columns: 1fr;
-      }
-
-      .result-main {
-        grid-template-columns: 1fr;
-      }
-
-      .q-title {
-        font-size: 16px;
-      }
+      h1 { font-size: 30px; }
+      .card { padding: 18px; border-radius: 20px; }
+      .result-main { grid-template-columns: 1fr; }
+      .q-title { font-size: 16px; }
     }
   </style>
 </head>
@@ -335,21 +291,6 @@
     </div>
 
     <div class="card">
-      <div class="notice">
-        <div class="notice-item">
-          <strong>0~2개</strong>
-          <span>대사저하 가능성 낮음</span>
-        </div>
-        <div class="notice-item">
-          <strong>3~6개</strong>
-          <span>대사저하 가능성 높음</span>
-        </div>
-        <div class="notice-item">
-          <strong>7개 이상</strong>
-          <span>대사저하 가능성 매우 높음</span>
-        </div>
-      </div>
-
       <form id="quizForm">
         <div class="question">
           <div class="q-title">1. 다이어트를 할수록 같은 식단에도 감량폭이 적어지고 있나요?</div>
@@ -518,7 +459,7 @@
         resultBadge.textContent = "매우 높음";
         resultTitle.textContent = "대사저하 가능성이 매우 높습니다.";
         resultText.textContent =
-          "식욕, 피로, 붓기, 체중 정체가 여러 개 겹친 상태일 수 있습니다. 계속 식단을 줄이거나 운동으로 밀어붙이면 더 버티는 몸으로 굳어질 수 있습니다.";
+          "현재는 몸이 버티는 방향으로 강하게 적응한 상태일 가능성이 큽니다. 이 상황에서 더욱 식단과 운동을 밀어붙이면 적게 먹고 칼로리 결핍이 있어도 오히려 살이 찌는 방향으로 흐를 수 있습니다.";
 
         ctaTitle.textContent = "지금 먼저 해야 할 행동";
         ctaText.textContent =
@@ -530,7 +471,7 @@
         resultBadge.textContent = "높음";
         resultTitle.textContent = "대사저하 가능성이 높습니다.";
         resultText.textContent =
-          "현재도 이미 대사 저하 신호가 적지 않게 나타나고 있습니다. 이 단계에서 더 참기 시작하면 식욕, 피로, 정체가 더 뚜렷해질 수 있습니다.";
+          "이미 식욕, 피로, 붓기, 체중 정체 같은 대사 저하 신호가 적지 않게 나타나고 있습니다. 이 상태에서 더 식단과 운동을 강하게 가져가면 적게 먹어도 몸이 살이 찌는 방향으로 적응할 수 있습니다.";
 
         ctaTitle.textContent = "지금 먼저 해야 할 행동";
         ctaText.textContent =
@@ -542,11 +483,11 @@
         resultBadge.textContent = "낮음";
         resultTitle.textContent = "대사저하 가능성은 낮은 편입니다.";
         resultText.textContent =
-          "현재 응답만 보면 전형적인 대사저하 신호는 적은 편입니다. 다만 실제로 식욕, 붓기, 소화 문제, 체중 정체가 있다면 다른 원인 점검이 필요할 수 있습니다.";
+          "현재는 전형적인 대사저하 증상은 많지 않은 편입니다. 다만 빠른 감량만을 위해 저칼로리, 저탄수 같은 다이어트 식이를 반복하면 이후 대사저하가 찾아올 수 있으니 지금부터도 방향을 잘 잡는 것이 중요합니다.";
 
         ctaTitle.textContent = "지금 먼저 해야 할 행동";
         ctaText.textContent =
-          "점수가 낮더라도 불편한 증상이 계속된다면 그냥 넘기지 말고 식사 패턴과 생활 리듬을 함께 확인해보는 게 좋습니다.";
+          "점수가 낮더라도 이후 무리한 감량 방향으로 가기보다 식사 패턴과 생활 리듬을 안정적으로 가져가는 것이 좋습니다.";
         ctaButton.textContent = "카카오톡 오픈채팅으로 추가 점검받기";
         ctaNote.textContent = "들어오신 뒤 ‘자가진단 낮음’이라고 남겨주시면 추가로 볼 부분이 있는지 확인해드릴게요.";
       }
