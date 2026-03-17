@@ -13,7 +13,6 @@
       --text: #15171c;
       --sub: #5d6472;
       --line: #e7eaf1;
-      --accent: #111827;
       --low: #17803d;
       --low-bg: #eaf8ef;
       --mid: #9a6700;
@@ -222,17 +221,11 @@
       letter-spacing: -0.03em;
     }
 
-    .score {
-      margin: 12px 0 18px;
-      font-size: 15px;
-      font-weight: 800;
-      color: #394150;
-    }
-
     .result-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 18px;
+      margin-top: 18px;
     }
 
     .panel {
@@ -301,96 +294,126 @@
       <form id="quizForm">
 
         <div class="question">
-          <div class="q-title">1. 다이어트를 할수록 같은 식단에도 감량폭이 적어지고 있나요?</div>
+          <div class="q-title">1. 다이어트를 할수록 같은 식단에도 감량폭이 적어지고 있나요?
+            <span class="q-note">👉 (에너지소비 방어상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q1" value="1"> 매우 그렇게 느껴진다</label>
           <label class="option"><input type="radio" name="q1" value="0"> 아니다. 여전히 잘 빠진다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">2. 다이어트 후 식욕이 점점 더 심해지는 케이스인가요?</div>
+          <div class="q-title">2. 다이어트 후 식욕이 점점 더 심해지는 케이스인가요?
+            <span class="q-note">👉 (식욕보상 및 에너지결핍 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q2" value="1"> 점점 더 높아지고 있다</label>
           <label class="option"><input type="radio" name="q2" value="0"> 식욕은 그래도 안정적이다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">3. 탄수화물 섭취를 줄였을 때 체중 변화는 어떤가요?</div>
+          <div class="q-title">3. 탄수화물 섭취를 줄였을 때 체중 변화는 어떤가요?
+            <span class="q-note">👉 (체중 방어 및 대사 적응 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q3" value="1"> 거의 변화가 없거나 다시 증가한다</label>
           <label class="option"><input type="radio" name="q3" value="1"> 일시적으로 빠지지만 유지되지 않는다</label>
           <label class="option"><input type="radio" name="q3" value="0"> 꾸준히 잘 빠진다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">4. 조금만 운동하고 움직이면 부종이 생기시나요?</div>
+          <div class="q-title">4. 조금만 운동하고 움직이면 부종이 생기시나요?
+            <span class="q-note">👉 (회복력 및 수분대사 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q4" value="1"> 매우~가끔 그렇게 느낀다</label>
           <label class="option"><input type="radio" name="q4" value="0"> 전혀 느끼지 않았다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">5. 식사 후 소화가 안 되고 변비, 위장문제가 있으신가요? (역류성 식도염, 헛트름이 식후에 심함)</div>
+          <div class="q-title">5. 식사 후 소화가 안 되고 변비, 위장문제가 있으신가요? (역류성 식도염, 헛트름이 식후에 심함)
+            <span class="q-note">👉 (소화 기능 및 대사 에너지 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q5" value="1"> 매우~자주 느낀다</label>
           <label class="option"><input type="radio" name="q5" value="0"> 전혀 느끼지 않는다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">6. 다낭성(PCOS) 난소 증후군 질환을 가지고 계신가요?</div>
+          <div class="q-title">6. 다낭성(PCOS) 난소 증후군 질환을 가지고 계신가요?
+            <span class="q-note">👉 (호르몬 및 대사 조절 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q6" value="1"> 네</label>
           <label class="option"><input type="radio" name="q6" value="0"> 아니오</label>
         </div>
 
         <div class="question">
-          <div class="q-title">7. 수족냉증이 있고 다른 사람에 비해 추위를 잘 타나요?</div>
+          <div class="q-title">7. 수족냉증이 있고 다른 사람에 비해 추위를 잘 타나요?
+            <span class="q-note">👉 (체온 유지 및 열 생성 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q7" value="1"> 그렇다</label>
           <label class="option"><input type="radio" name="q7" value="0"> 전혀 아니다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">8. 현재 피임약이나 장치(미레나 등)를 사용하여 월경을 막고 계신가요?</div>
+          <div class="q-title">8. 현재 피임약이나 장치(미레나 등)를 사용하여 월경을 막고 계신가요?
+            <span class="q-note">👉 (호르몬 개입 및 생식 기능 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q8" value="1"> 네</label>
           <label class="option"><input type="radio" name="q8" value="0"> 아니오</label>
         </div>
 
         <div class="question">
-          <div class="q-title">9. 아침부터 낮까지 너무 피로하고 에너지가 없다.</div>
+          <div class="q-title">9. 아침부터 낮까지 너무 피로하고 에너지가 없다.
+            <span class="q-note">👉 (낮 시간대 에너지 유지 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q9" value="1"> 매우 그렇다</label>
           <label class="option"><input type="radio" name="q9" value="0"> 보통이다</label>
           <label class="option"><input type="radio" name="q9" value="0"> 아니다. 그냥 게으른 느낌이다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">10. 갑상선 기능저하, 부신기능저하를 판정받고 현재까지 앓고 계신가요?</div>
+          <div class="q-title">10. 갑상선 기능저하, 부신기능저하를 판정받고 현재까지 앓고 계신가요?
+            <span class="q-note">👉 (호르몬 저하 및 대사 조절 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q10" value="1"> 네</label>
           <label class="option"><input type="radio" name="q10" value="0"> 아니오</label>
         </div>
 
         <div class="question">
-          <div class="q-title">11. 충분히 잠을 자도 기상 후 극심한 피로가 느껴진다. 몸에 에너지가 없는 느낌이다.</div>
+          <div class="q-title">11. 충분히 잠을 자도 기상 후 극심한 피로가 느껴진다. 몸에 에너지가 없는 느낌이다.
+            <span class="q-note">👉 (수면 회복 및 에너지 충전 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q11" value="1"> 매우 그렇다</label>
           <label class="option"><input type="radio" name="q11" value="0"> 보통이다</label>
           <label class="option"><input type="radio" name="q11" value="0"> 거의 개운하다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">12. 공복시간이 5시간 이상이 되면 극심한 허기와 에너지 저하를 느낀다.</div>
+          <div class="q-title">12. 공복시간이 5시간 이상이 되면 극심한 허기와 에너지 저하를 느낀다.
+            <span class="q-note">👉 (공복 적응 및 에너지 전환 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q12" value="1"> 매우 그렇다</label>
           <label class="option"><input type="radio" name="q12" value="0"> 보통이다</label>
           <label class="option"><input type="radio" name="q12" value="0"> 전혀 그렇지 않다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">13. 과거보다 같은 양을 먹어도 더 쉽게 살찌는 느낌을 받은 적 있다.</div>
+          <div class="q-title">13. 과거보다 같은 양을 먹어도 더 쉽게 살찌는 느낌을 받은 적 있다.
+            <span class="q-note">👉 (체중 증가 민감도 및 대사 효율 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q13" value="1"> 매우~자주 그렇다</label>
           <label class="option"><input type="radio" name="q13" value="0"> 보통이다</label>
           <label class="option"><input type="radio" name="q13" value="0"> 전혀 아니다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">14. 극단적 다이어트 후 머리카락, 손톱, 발톱이 잘 빠지고 균열 및 이상 신호가 생긴 적 있다.</div>
+          <div class="q-title">14. 극단적 다이어트 후 머리카락, 손톱, 발톱이 잘 빠지고 균열 및 이상 신호가 생긴 적 있다.
+            <span class="q-note">👉 (회복력 및 영양 대사 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q14" value="1"> 매우~가끔 그렇다</label>
           <label class="option"><input type="radio" name="q14" value="0"> 아니다. 짱짱하다</label>
         </div>
 
         <div class="question">
-          <div class="q-title">15. 남들에 비해 감기, 축농증, 구내염 등 면역력이 확실히 약해진 느낌이 있다.</div>
+          <div class="q-title">15. 남들에 비해 감기, 축농증, 구내염 등 면역력이 확실히 약해진 느낌이 있다.
+            <span class="q-note">👉 (면역 회복 및 대사 방어 상태)</span>
+          </div>
           <label class="option"><input type="radio" name="q15" value="1"> 거의 2~3달에 한 번은 그렇다</label>
           <label class="option"><input type="radio" name="q15" value="0"> 그냥 1년에 많아도 1~2번이다</label>
         </div>
@@ -449,7 +472,6 @@
         </div>
 
         <h2 id="resultTitle"></h2>
-        <div class="score" id="resultScore"></div>
 
         <div class="result-grid">
           <div class="panel">
@@ -468,7 +490,7 @@
               <p id="ctaText"></p>
             </div>
             <a href="https://open.kakao.com/o/sy21QMli" target="_blank" rel="noopener noreferrer" id="ctaButton">
-              카카오톡 오픈채팅 바로가기
+              카카오톡 신진대사 무료점검 및 상담받기
             </a>
             <small id="ctaNote"></small>
           </div>
@@ -497,7 +519,6 @@
       const resultBox = document.getElementById("resultBox");
       const resultBadge = document.getElementById("resultBadge");
       const resultTitle = document.getElementById("resultTitle");
-      const resultScore = document.getElementById("resultScore");
       const resultText = document.getElementById("resultText");
       const extraText = document.getElementById("extraText");
       const ctaTitle = document.getElementById("ctaTitle");
@@ -506,7 +527,6 @@
       const ctaButton = document.getElementById("ctaButton");
 
       resultBadge.className = "badge";
-      resultScore.textContent = "위험응답 " + score + "개 / 20개";
 
       if (score <= 2) {
         resultBadge.classList.add("low");
@@ -517,7 +537,7 @@
         ctaTitle.textContent = "지금 먼저 해야 할 행동";
         ctaText.textContent =
           "지금부터라도 무리하게 식사량을 줄이기보다 식사 패턴과 생활 리듬을 안정적으로 가져가는 것이 좋습니다.";
-        ctaButton.textContent = "카카오톡 오픈채팅으로 추가 점검받기";
+        ctaButton.textContent = "카카오톡 신진대사 무료점검 및 상담받기";
         ctaNote.textContent =
           "들어오신 뒤 ‘자가진단 낮음’이라고 남겨주시면 추가로 볼 부분이 있는지 확인해드릴게요.";
       } else if (score <= 5) {
@@ -529,7 +549,7 @@
         ctaTitle.textContent = "지금 먼저 해야 할 행동";
         ctaText.textContent =
           "무작정 저탄수, 단식, 운동량 증가로 가기보다 지금 식사 구조가 몸을 더 지치게 만들고 있는지 먼저 점검하는 것이 우선입니다.";
-        ctaButton.textContent = "카카오톡 오픈채팅으로 상담받기";
+        ctaButton.textContent = "카카오톡 신진대사 무료점검 및 상담받기";
         ctaNote.textContent =
           "들어오신 뒤 ‘자가진단 의심’이라고 남겨주시면 현재 단계에 맞게 설명드릴게요.";
       } else {
@@ -541,7 +561,7 @@
         ctaTitle.textContent = "지금 먼저 해야 할 행동";
         ctaText.textContent =
           "식단을 더 줄이기보다 현재 식사 횟수, 공복 시간, 식욕 반응, 회복 상태부터 먼저 점검해야 합니다.";
-        ctaButton.textContent = "카카오톡 오픈채팅으로 상태 점검받기";
+        ctaButton.textContent = "카카오톡 신진대사 무료점검 및 상담받기";
         ctaNote.textContent =
           "들어오신 뒤 ‘자가진단 꽤 높음’이라고 남겨주시면 더 빠르게 방향을 잡아드릴게요.";
       }
